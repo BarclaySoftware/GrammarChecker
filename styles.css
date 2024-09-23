@@ -1,0 +1,107 @@
+:root {
+    --brand-color: #28a745;
+    --brand-color-dark: #218838;
+    --notice-color: #218838;
+    --error-color: #a72828;
+    --background-color: #f4f4f4;
+    --border-color: #dddddd;
+    --white-color: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --font: 'Kilroy';
+}
+
+@font-face {
+    font-family: 'Kilroy';
+    src: url(./Kilroy-VF.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+textarea {
+    font-family: var(--font);
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    resize: vertical;
+    outline: none;
+}
+
+textarea:focus {
+    font-size: 16px;
+    border: 1px solid var(--brand-color);
+
+}
+
+::selection {
+    background-color: var(--brand-color);
+    color: var(--white-color);
+}
+
+button {
+    font-family: var(--font);
+    font-weight: 700;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--brand-color);
+    color: var(--white-color);
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--brand-color-dark);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.suggestion {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+.replacement {
+    color: var(--notice-color);
+    font-weight: bold;
+}
